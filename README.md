@@ -28,22 +28,27 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 
-# Write NFT Contract Code
+# Write NFT & Metaverce Game Land Smart Contract Code
 
-Simple you can import from "Openzeppelin" and use the function
+Simple you can import from "Openzeppelin" and use the function for ERC-721 & Ownership by 
 
 install openzeppelin contracts on your system
 ```
 npm install @openzeppelin/contracts
 ```
 
-In the contracts folder, create a new Solidity file called NFTee.sol and write code there...
+In the contracts folder, create a new Solidity file called GameLand.sol and write code there...
 
 # Compile the contract
 
 ```
 npx hardhat compile
 ```
+# Deploy on Goerli Testnet
+```
+npx hardhat run --network goerli scripts/deploy.js
+```
+
 If there are no errors, you are good to go :)
 
 # Env file
