@@ -2,20 +2,17 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  /*
-A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
-so nftContract here is a factory for instances of our NFTee contract.
-*/
-  const nftContract = await ethers.getContractFactory("NFTee");
+
+  const Contract = await ethers.getContractFactory("GameLand");
 
   // here we deploy the contract
-  const deployedNFTContract = await nftContract.deploy();
+  const deployedContract = await Contract.deploy();
 
   // wait for the contract to deploy
-  await deployedNFTContract.deployed();
+  await deployedContract.deployed();
 
   // print the address of the deployed contract
-  console.log("NFT Contract Address:", deployedNFTContract.address);
+  console.log("NFT Contract Address:", deployedContract.address);
 }
 
 // Call the main function and catch if there is any error
